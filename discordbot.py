@@ -11,18 +11,6 @@ async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
-@client.event
-async def on_ready():
-    print('Logged in as')
-    print(client.user.name)
-    print(client.user.id)
-    print('------')
-    
-@client.event
-async def on_message(message):
-    if message.content.startswith("はろー"):
-        m = "こんにちは、" + message.author.name + "さん"
-        await client.send_message(message.channel,m)
 
 
 @bot.command()
