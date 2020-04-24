@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import asyncio
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -15,5 +16,11 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def suga(ctx):
     await ctx.send('chisa')
+    
+@client.event
+async def on_message(message):
+    if message.content.startswith("はろー"):
+        m = "こんにちは、" + message.author.name + "さん"
+        await client.send_message(message.channel,m)
     
 bot.run(token)
