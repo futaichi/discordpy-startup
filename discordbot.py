@@ -14,7 +14,7 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def suga(ctx):
-    await ctx.send('chisa')
+    await ctx.send('がぬまち')
     
 
 bot.run(token)
