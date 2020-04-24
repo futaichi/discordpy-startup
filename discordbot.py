@@ -14,7 +14,10 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def suga(ctx):
-    await ctx.send('がぬまち')
+    if message.content.startswith("はろー"):
+        m = "こんにちは、" + message.author.name + "さん"
+        await ctx.send_message(message.channel,m)
+    #await ctx.send('がぬまち')
     
 
 bot.run(token)
