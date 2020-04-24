@@ -15,7 +15,7 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def suga(ctx):
     
-        m = "こんにちは、" + message.author.name + "さん"
+        m = "こんにちは、" + command.author.name + "さん"
         await ctx.send(m)
     #await ctx.send('がぬまち')
     
