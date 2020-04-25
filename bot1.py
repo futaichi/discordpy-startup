@@ -2,6 +2,7 @@ import discord
 import asyncio
 
 client = discord.Client()
+token = os.environ['DISCORD_BOT_TOKEN']
 
 @client.event
 async def on_ready():
@@ -16,4 +17,4 @@ async def on_message(message):
         m = "こんにちは、" + message.author.name + "さん"
         await client.send_message(message.channel,m)
 
-client.run('NzAyOTE5MDg2MDY1MTg4OTQ2.XqP_Yw.rbgQvH4Xs0BiX45r0XNafmhhA18')
+client.run('token')
